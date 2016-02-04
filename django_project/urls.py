@@ -12,7 +12,7 @@ urlpatterns = patterns('',
 
     url(r'^admin103759/', include(admin.site.urls)),
     url(r'^$', views.index, name='index'),
-    url(r'^submit_email/$', views.submit_email, name='submit_email'),
+    url(r'^submit_email/$', views.submit_email, name='submit_email'),mike
     url(r'^team/$', views.team, name='team'),
     url(r'^press/$', views.press, name='press'),
     url(r'^thankyou/$', views.thankyou, name='thankyou'),
