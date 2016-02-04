@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = 'YCiq6mV3CCSCJHtLjir7mVhlx0pBNmz9qyJ024GGXYE7lTV8Hh'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 TEMPLATE_DEBUG = True
 
@@ -94,4 +94,4 @@ TEMPLATE_DIRS = (os.path.join(BASE_DIR, "templates"),)
 print TEMPLATE_DIRS
 
 # uncomment for development, comment when pushing to server
-STATICFILES_DIRS = (os.path.join('django_project/static'), )
+# STATICFILES_DIRS = (os.path.join('django_project/static'), )
