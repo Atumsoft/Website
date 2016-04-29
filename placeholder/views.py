@@ -20,6 +20,9 @@ def product(request):
 def solution(request):
     return render(request, 'solution.html')
 
+def contact_form(request):
+    return render(request, 'contact-form.html')
+
 
 def submit_email(request):
     if request.method == 'POST':
