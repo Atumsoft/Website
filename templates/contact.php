@@ -1,5 +1,3 @@
-<?php
-
 if(isset($_POST['email'])) {
 
     $email_to = "olemaitre@atumsoft.com";
@@ -86,9 +84,3 @@ if(isset($_POST['email'])) {
 Thank you for contacting us. We will be in touch with you very soon.
  
  
- 
-<?php
- 
-}
- 
-?>
