@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="theme-color" content="#2196F3">
+    <title>Atumsoft - Laboratories Simplified in Cincinnati, OH</title>
+
+    <meta name="description" content="Atumsoft creates an interconnected workspace in laboratories with wireless technology. With Atumsoft, instruments can be accessed securely from anywhere.">
+
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-66539731-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+    <link rel="icon" href="{% static 'img/atumsoft_favicon.png' %}" type="image/gif" sizes="16x16">
+
+    <!-- CSS  -->
+    <link href="{% static 'min/plugin-min.css' %}" type="text/css" rel="stylesheet">
+    <link href="{% static 'min/custom-min.css' %}" type="text/css" rel="stylesheet" >
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
+
+    <style type="text/css">
+
+        .is-active{
+           background-color: #1E88E5;
+        }
+
+        #product1 {
+            width: 500px;
+            height: 100%;
+            padding-top: 50px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #product2 {
+            width: 600px;
+            height: 100%;
+            padding-top: 50px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+
+    </style>
+</head>
+<body id="top" class="scrollspy">
+
+<!-- Pre Loader -->
+<div id="loader-wrapper">
+    <div id="loader"></div>
+ 
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+ 
+</div>
+
+<!--Navigation-->
+ <div class="navbar-fixed">
+    <nav id="nav_f" class="default_color" role="navigation">
+        <div class="container">
+            <div class="nav-wrapper">
+            <a href="{% static 'index.html' %}" id="logo-container" class="brand-logo">Atumsoft</a>
+                <ul class="right hide-on-med-and-down">
+                    <li class="is-active"><a href="{% static 'product.html' %}">Product</a></li>
+                    <li><a href="{% static 'about.html' %}">About</a></li>
+                    <li><a href="{% static 'contact-form.html' %}">Contact</a></li>
+                </ul>
+                <ul id="nav-mobile" class="side-nav">
+                    <li><a href="{% static 'product.html' %}">Product</a></li>
+                    <li><a href="{% static 'about.html' %}">About</a></li>
+                    <li><a href="{% static 'contact-form.html' %}">Contact</a></li>
+                </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+            </div>
+        </div>
+    </nav>
+</div>
+
+
+
+<!--Intro and service-->
+<div id="intro" class="section scrollspy">
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <h1 class="center header span_h2">The Atumsoft Bridge</h1>
+            </div>
+
+            <div  class="col s12 m12 l6">
+                <img class="center" id="product1" src="img/product_msv.png">
+            </div>
+            
+            <div class="col s12 m12 l6">
+                <h5 class="promo-caption">
+                    <p class="light">
+                        <span class="span_h2" style="font-size: 1.2em"><strong>What is it?</strong></span><br>
+                        The Atumsoft bridge is a small device that replaces the big, bulky computer attached to each instrument in a chemistry lab.<br><br>
+
+                        <span class="span_h2" style="font-size: 1.2em"><strong>How does it work?</strong></span><br>
+                        Instead of having a cable directly connected to a computer, the instrument is plugged into our bridge. This allows for all the data to be securely transmitted to any location that an analyst may be at from a laptop, tablet, or smartphone.
+                        <br><br>
+                    </p>
+                </h5>
+            </div>
+
+            <div class="col s12 m12 l6">
+                <h5 class="promo-caption">
+                    <p class="light">
+                        <span class="span_h2" style="font-size: 1.2em"><strong>What are the benefits?</strong></span><br>
+                        <i class="text_b small fa fa-check"></i> 100% agnostic to the brand of instrument used<br>
+                        <i class="text_b small fa fa-check"></i> Allows labs to continue using the existing instrument software that they know and love<br>
+                        <i class="text_b small fa fa-check"></i> Greater control over lab instruments<br>
+                        <i class="text_b small fa fa-check"></i> Only analysts who are currently scheduled to work on an instrument can see it and access its data
+                        <br><br>
+
+                        <span class="span_h2" style="font-size: 1.2em"><strong>How much is it?</strong></span><br>
+                        <span class="text_b">FREE!</span> We are planning to offer our bridge at no cost. You only have to pay a yearly licensing fee per employee. Please contact us for more information on pricing.<br><br>
+                    </p>
+                </h5>
+            </div>
+
+            <div class="col s12 m12 l6">
+                <img class="center" id="product2" src="img/product_sv.png">
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!--Work-->
+
+
+<!--Parallax-->
+<div class="parallax-container">
+    <div class="parallax"><img src="img/lab_03.jpg"></div>
+</div>
+
+
+
+<!--Footer-->
+<footer id="contact" class="page-footer default_color scrollspy">
+    <div class="container">  
+        <div class="row">
+            <div class="col l6 s12">
+                <form class="col s12" action="contact.php" method="post">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <i class="mdi-action-account-circle prefix white-text"></i>
+                            <input id="icon_prefix" name="name" type="text" class="validate white-text">
+                            <label for="icon_prefix" class="white-text">Name</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <i class="mdi-communication-email prefix white-text"></i>
+                            <input id="icon_email" name="email" type="email" class="validate white-text">
+                            <label for="icon_email" class="white-text">Email</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <i class="mdi-editor-mode-edit prefix white-text"></i>
+                            <textarea id="icon_prefix2" name="message" class="materialize-textarea white-text"></textarea>
+                            <label for="icon_prefix2" class="white-text">Message</label>
+                        </div>
+                        <div class="col offset-s7 s5">
+                            <button class="btn waves-effect waves-light white darken-1 blue-text" type="submit">Submit
+                                <i class="mdi-content-send right blue-text"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col l3 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                    <li><a class="white-text" href="http://www.atumsoft.com/">Home</a></li>
+                    <li><a class="white-text" href="http://www.atumsoft.com/product.html">Product</a></li>
+                    <li><a class="white-text" href="http://www.atumsoft.com/about.html">About</a></li>
+                    <li><a class="white-text" href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="col l3 s12">
+                <h5 class="white-text">Social</h5>
+                <ul>
+                    <li>
+                        <a class="white-text" href="https://www.twitter.com/atumsoftco">
+                            <i class="small fa fa-twitter white-text" style="padding-bottom: 10px;"></i> Twitter
+                        </a>
+                    </li>
+                    <li>
+                        <a class="white-text" href="https://www.facebook.com/atumsoftco">
+                            <i class="small fa fa-facebook white-text" style="padding-bottom: 10px;"></i> Facebook
+                        </a>
+                    </li>
+                    <li>
+                        <a class="white-text" href="https://www.linkedin.com/company/atumsoft">
+                            <i class="small fa fa-linkedin white-text" style="padding-bottom: 10px;"></i> Linkedin
+                        </a>
+                    </li>
+                    <li>
+                        <a class="white-text" href="https://angel.co/atumsoft">
+                          <i class="small fa fa-angellist white-text" style="padding-bottom: 10px;"></i> Angellist  
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright default_color">
+        <div class="container">
+            
+        </div>
+    </div>
+</footer>
+
+
+    <!--  Scripts-->
+    <script src="min/plugin-min.js"></script>
+    <script src="min/custom-min.js"></script>
+
+    </body>
+</html>
