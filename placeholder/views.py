@@ -11,6 +11,15 @@ EMAIL_DICT = {}
 def index(request):
     return render(request, 'index.html')
 
+def about(request):
+    return render(request, 'about.html')
+
+def product(request):
+    return render(request, 'product.html')
+
+def solution(request):
+    return render(request, 'solution.html')
+
 
 def submit_email(request):
     if request.method == 'POST':
