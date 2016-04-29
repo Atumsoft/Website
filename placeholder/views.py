@@ -2,6 +2,8 @@ from django.shortcuts import render
 from django.shortcuts import redirect
 # Create your views here.
 import shelve
+import subprocess, os
+from django_project.settings import TEMPLATE_DIRS
 
 
 EMAIL_LIST_FILENAME = 'emails.txt'
@@ -22,6 +24,10 @@ def solution(request):
 
 def contact_form(request):
     return render(request, 'contact-form.html')
+
+def contact(request):
+    #simple caller, disguard output
+    subprocess.call("php %s" % os.path.join(TEMPLATE_DIRS, 'contact.php'))
 
 
 def submit_email(request):
