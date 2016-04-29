@@ -57,14 +57,14 @@
             <div class="nav-wrapper">
             <a href="{% static 'index.html" id="logo-container" class="brand-logo">Atumsoft</a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="{% static 'product.html' %}">Product</a></li>
-                    <li><a href="{% static 'about.html' %}">About</a></li>
-                    <li><a href="{% static 'contact-form.html' %}">Contact</a></li>
+                    <li><a href="{% url 'product' %}">Product</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="{% url 'contact-form' %}">Contact</a></li>
                 </ul>
                 <ul id="nav-mobile" class="side-nav">
-                    <li><a href="{% static 'product.html' %}">Product</a></li>
-                    <li><a href="{% static 'about.html' %}">About</a></li>
-                    <li><a href="{% static 'contact-form.html' %}">Contact</a></li>
+                    <li><a href="{% url 'product' %}">Product</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="{% url 'contact-form' %}">Contact</a></li>
                 </ul>
             <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
             </div>
@@ -282,9 +282,9 @@
             <div class="col l3 s12">
                 <h5 class="white-text">Links</h5>
                 <ul>
-                    <li><a class="white-text" href="http://www.atumsoft.com/">Home</a></li>
-                    <li><a class="white-text" href="http://www.atumsoft.com/product.html">Product</a></li>
-                    <li><a class="white-text" href="http://www.atumsoft.com/about.html">About</a></li>
+                    <li><a href="{% url 'product' %}">Product</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="{% url 'contact-form' %}">Contact</a></li>
                     <li><a class="white-text" href="#">Blog</a></li>
                 </ul>
             </div>
