@@ -103,7 +103,7 @@
             <div class="col s12 m3">
                 <div class="card card-avatar">
                     <div class="waves-effect waves-block waves-light">
-                        <img class="activator" src="img/olivier.jpg">
+                        <img class="activator" src="{% static 'img/olivier.jpg' %}">
                     </div>
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">Olivier Lemaitre <br/>
@@ -128,7 +128,7 @@
             <div class="col s12 m3">
                 <div class="card card-avatar">
                     <div class="waves-effect waves-block waves-light">
-                        <img class="activator" src="img/andrew.jpg">
+                        <img class="activator" src="{% static 'img/andrew.jpg' %}">
                     </div>
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">Andrew Carl<br/>
@@ -154,7 +154,7 @@
             <div class="col s12 m3">
                 <div class="card card-avatar">
                     <div class="waves-effect waves-block waves-light">
-                        <img class="activator" src="img/fontana.jpg">
+                        <img class="activator" src="{% static 'img/fontana.jpg' %}">
                     </div>
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">Fontana Ruark<br/>
@@ -179,7 +179,7 @@
             <div class="col s12 m3">
                 <div class="card card-avatar">
                     <div class="waves-effect waves-block waves-light">
-                        <img class="activator" src="img/brad.jpg">
+                        <img class="activator" src="{% static 'img/brad.jpg' %}">
                     </div>
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">Brad Conyers<br/>
@@ -242,7 +242,7 @@
             <div class="col s12 m3">
                 <div class="card card-avatar">
                     <div class="waves-effect waves-block waves-light">
-                        <img class="activator" src="img/brianpowell.png">
+                        <img class="activator" src="{% static 'img/brianpowell.png' %}">
                     </div>
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">Brian Powell<br/>
@@ -253,7 +253,7 @@
             <div class="col s12 m3">
                 <div class="card card-avatar">
                     <div class="waves-effect waves-block waves-light">
-                        <img class="activator" src="img/marclemaitre.png">
+                        <img class="activator" src="{% static 'img/marclemaitre.png' %}">
                     </div>
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">Marc Lemaitre<br/>
@@ -264,7 +264,7 @@
             <div class="col s12 m3">
                 <div class="card card-avatar">
                     <div class="waves-effect waves-block waves-light">
-                        <img class="activator" src="img/mike.jpg">
+                        <img class="activator" src="{% static 'img/mike.jpg' %}">
                     </div>
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">Mike Bott<br/>
@@ -290,31 +290,31 @@
             <ul>
                 <li>
                     <a href="http://www.cintrifuse.com/blog/there-and-back-again-atumsofts-journey-from-startupcincy-to-global-demo-day/" target="_blank">
-                        <img src="img/cintrifuse.png" class="inNewsLogo" alt="Cintrifuse">
+                        <img src="{% static 'img/cintrifuse.png' %}" class="inNewsLogo" alt="Cintrifuse">
                     </a>
                 </li>
 
                 <li>
                     <a href="http://www.wcpo.com/news/insider/new-business-atumsoft" target="_blank">
-                        <img src="img/wcpo_bw.png" class="inNewsLogo" alt="WCPO">
+                        <img src="{% static 'img/wcpo_bw.png' %}" class="inNewsLogo" alt="WCPO">
                     </a>
                 </li>
 
                 <li>
                     <a href="http://angelhack.com/?s=atumsoft" target="_blank">
-                        <img src="img/angelhack.png" class="inNewsLogo" alt="Angelhack">
+                        <img src="{% static 'img/angelhack.png' %}" class="inNewsLogo" alt="Angelhack">
                     </a>
                 </li>
 
                 <li>
                     <a href="http://www.prweb.com/releases/2015GDD/10/prweb12996465.htm" target="_blank">
-                        <img src="img/prweb.png" class="inNewsLogo" alt="PR Web">
+                        <img src="{% static 'img/prweb.png' %}" class="inNewsLogo" alt="PR Web">
                     </a>
                 </li>
 
                 <li>
                     <a href="https://www.straphq.com/resources/strap-mentee-atumsoft-wins-100000-in-prizes-at-angelhack" target="_blank">
-                        <img src="img/strap.png" class="inNewsLogo" alt="Strap">
+                        <img src="{% static 'img/strap.png' %}" class="inNewsLogo" alt="Strap">
                     </a>
                 </li>
             </ul>
@@ -325,7 +325,7 @@
 
 <!--Parallax-->
 <div class="parallax-container">
-    <div class="parallax"><img src="img/lab_02.jpg"></div>
+    <div class="parallax"><img src="{% static 'img/lab_02.jpg' %}"></div>
 </div>
 
 
@@ -405,8 +405,8 @@
 
 
     <!--  Scripts-->
-    <script src="min/plugin-min.js"></script>
-    <script src="min/custom-min.js"></script>
+    <script src="{% static 'min/plugin-min.js' %}"></script>
+    <script src="{% static 'min/custom-min.js' %}"></script>
 
     </body>
 </html>

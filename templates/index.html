@@ -79,9 +79,9 @@
     <div class="container">
         <div class="row">
             <div class="col s12 center-align">
-                <div id="a"><img src="img/aimg.png" id="alogo"></div>
-                <div id="b"><img src="img/bimg.png" id="blogo"></div>
-                <div id="c"><img src="img/cimg.png" id="clogo"></div>
+                <div id="a"><img src="{% static 'img/aimg.png' %}" id="alogo"></div>
+                <div id="b"><img src="{% static 'img/bimg.png' %}" id="blogo"></div>
+                <div id="c"><img src="{% static 'img/cimg.png' %}" id="clogo"></div>
 
                 <h1 class="text_h center header cd-headline letters type hero-h1">
                     <span class="cd-words-wrapper waiting">
@@ -136,7 +136,7 @@
 
 <!--Parallax-->
 <div class="parallax-container">
-    <div class="parallax"><img src="img/lab_01.jpg"></div>
+    <div class="parallax"><img src="{% static 'img/lab_01.jpg' %}"></div>
 </div>
 
 <!--Team-->
@@ -147,7 +147,7 @@
             <div class="col s12 m3">
                 <div class="card card-avatar">
                     <div class="waves-effect waves-block waves-light">
-                        <img class="activator" src="img/olivier.jpg">
+                        <img class="activator" src="{% static 'img/olivier.jpg' %}">
                     </div>
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">Olivier Lemaitre <br/>
@@ -172,7 +172,7 @@
             <div class="col s12 m3">
                 <div class="card card-avatar">
                     <div class="waves-effect waves-block waves-light">
-                        <img class="activator" src="img/andrew.jpg">
+                        <img class="activator" src="{% static 'img/andrew.jpg' %}">
                     </div>
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">Andrew Carl<br/>
@@ -198,7 +198,7 @@
             <div class="col s12 m3">
                 <div class="card card-avatar">
                     <div class="waves-effect waves-block waves-light">
-                        <img class="activator" src="img/fontana.jpg">
+                        <img class="activator" src="{% static 'img/fontana.jpg' %}">
                     </div>
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">Fontana Ruark<br/>
@@ -223,7 +223,7 @@
             <div class="col s12 m3">
                 <div class="card card-avatar">
                     <div class="waves-effect waves-block waves-light">
-                        <img class="activator" src="img/brad.jpg">
+                        <img class="activator" src="{% static 'img/brad.jpg' %}">
                     </div>
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">Brad Conyers<br/>
@@ -324,13 +324,13 @@
 
 
     <!--  Scripts-->
-    <script src="min/plugin-min.js"></script>
-    <script src="min/custom-min.js"></script>
+    <script src="{% static 'min/plugin-min.js' %}"></script>
+    <script src="{% static 'min/custom-min.js' %}"></script>
 
-    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/1.3.0/jquery.scrollmagic.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/1.3.0/jquery.scrollmagic.debug.js"></script>
-    <script src="js/brian_scroll.js"></script>
+    <script src="{% static '//cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js' %}"></script>
+    <script src="{% static '//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/1.3.0/jquery.scrollmagic.js' %}"></script>
+    <script src="{% static '//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/1.3.0/jquery.scrollmagic.debug.js' %}"></script>
+    <script src="{% static 'js/brian_scroll.js' %}"></script>
     
 <!--     <script>
         $(document).ready(function() {
