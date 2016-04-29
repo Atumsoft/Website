@@ -1,185 +1,349 @@
 <!DOCTYPE html>
-{% load staticfiles %}
-<html lang="en">
-  <head>
-    <link rel="shortcut icon" type="image/png" href="{{STATIC_URL}}/images/favicon.png" />
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Atumsoft</title>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="theme-color" content="#2196F3">
+    <title>Atumsoft - Laboratories Simplified in Cincinnati, OH</title>
 
-    <!-- Bootstrap -->
-    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <meta name="description" content="Atumsoft creates an interconnected workspace in laboratories with wireless technology. With Atumsoft, instruments can be accessed securely from anywhere.">
 
-    <!-- Custom styles for this template -->
-    <link href="{% static 'css/cover.css' %}" rel="stylesheet">
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-   <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-66539731-1', 'auto');
+      ga('send', 'pageview');
 
-    ga('create', 'UA-66539731-1', 'auto');
-    ga('send', 'pageview');
-
-  </script>
+    </script>
 
 
-  <style>
+    <link rel="icon" href="{% static 'img/atumsoft_favicon.png' %}" type="image/gif" sizes="16x16">
 
-  #logo {
-    width: 500px;
-  }
+    <!-- CSS  -->
+    <link href="{% static 'min/plugin-min.css' %}" type="text/css" rel="stylesheet">
+    <link href="{% static 'min/custom-min.css' %}" type="text/css" rel="stylesheet" >
+    <link href="{% static 'https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet' %}">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}">
 
-  .submit {
-    margin-top: 15px; 
-  }
+    <style type="text/css">
 
-  .social {
-  	width: 50px;
-  }
 
-  </style>
+    </style>
 
-  </head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/brian_scroll.css' %}">
+</head>
+<body id="top" class="scrollspy">
 
-  <body>
+<!-- Pre Loader -->
+<div id="loader-wrapper">
+    <div id="loader"></div>
+ 
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+ 
+</div>
 
-  <div class="site-wrapper">
-
-      <div class="site-wrapper-inner">
-
-        <div class="cover-container">
-
-            <div class="inner">
-              <h3 class="masthead-brand"></h3>
-              <nav>
-                <ul class="nav masthead-nav">
-                  <li><a href="{% url 'index' %}">Home</a></li>
-                  <li><a href="{% url 'team' %}">Team</a></li>
-                  <li><a href="{% url 'press' %}">Press</a></li>
+<!--Navigation-->
+ <div class="navbar-fixed">
+    <nav id="nav_f" class="default_color" role="navigation">
+        <div class="container">
+            <div class="nav-wrapper">
+            <a href="{% static 'index.html" id="logo-container" class="brand-logo">Atumsoft</a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="{% static 'product.html' %}">Product</a></li>
+                    <li><a href="{% static 'about.html' %}">About</a></li>
+                    <li><a href="{% static 'contact-form.html' %}">Contact</a></li>
                 </ul>
-              </nav>
+                <ul id="nav-mobile" class="side-nav">
+                    <li><a href="{% static 'product.html' %}">Product</a></li>
+                    <li><a href="{% static 'about.html' %}">About</a></li>
+                    <li><a href="{% static 'contact-form.html' %}">Contact</a></li>
+                </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
             </div>
-          <div class="inner cover">
-
-            <h1 class="cover-heading"><img src="{{ STATIC_URL }}images/logo_tag.png" alt="Atumsoft" id="logo"></h1>
-            <p class="lead">Atumsoft has created the new standard of data collection and analysis in laboratories. Using wireless connectivity for instrumentation, we enable technicians to save time on monitoring and gathering data, while providing their companies with the flexibility and mobility that IoT technology allows.</p>
-
-            <p>If you are interested in more information about our services, feel free to contact us using the form below.</p>
-
-            <form class="form-vertical" role="form">
-
-            </form>
-
-
-              <script type="text/javascript">var submitted=false</script>
-              <iframe name="hidden_iframe" id="hidden_iframe"
-                      style="display:none;" onload="if(submitted)
-                      {window.location='thankyou';}"></iframe>
-
-              <form action="https://docs.google.com/forms/d/1Q1Hc0BjwM8p6wvLcLorZ6iFFAKiS_71K18-9ZzysBPk/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
-
-                <div class="ss-form-question errorbox-good" role="listitem">
-
-                    <div dir="auto" class="ss-item  ss-text"><div class="ss-form-entry">
-
-                        <div class="input-group">
-
-                            <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-user"></span></span>
-
-                            <input type="text" name="entry.1080469739" value="" class="form-control" id="entry.1080469739" dir="auto" aria-required="true" required="" aria-label="Name" placeholder="Name" aria-describedby="basic-addon1" title="">
-
-                            <div/>
-
-                            <div class="error-message" id="471157510_errorMessage"></div>
-
-                        </div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
-
-                    <p></p>
-
-                    <div dir="auto"itclass="ss-item  ss-text"><div class="ss-form-entry">
-
-                        <div class="input-group">
-
-                            <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-user"></span></span>
-
-                            <input type="text" name="entry.517587234" value="" class="form-control" id="entry.517587234" dir="auto" aria-required="true" required="" aria-label="E-Mail" placeholder="E-Mail Address" aria-describedby="basic-addon1" title="">
-
-                            <div></div>
-
-                            <div class="error-message" id="1175016982_errorMessage"></div>
-
-                        </div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
-
-                    <p></p>
-
-                    <div dir="auto" class="ss-item  ss-paragraph-text"><div class="ss-form-entry">
-
-                        <div class="input-group">
-
-                            <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-user"></span></span>
-
-                            <textarea name="entry_37778611" value="" class="form-control" id="entry_37778611" dir="auto" aria-label="Message" placeholder="Enter a message for us here. We will get back to you within 2 business days." aria-describedby="basic-addon1" title=""></textarea>
-
-                            <div></div>
-
-                            <div class="error-message" id="471780047_errorMessage"></div>
-
-                        </div></div>
-
-                        <input type="hidden" name="draftResponse" value="[,,&quot;5866401548077091962&quot;]">
-
-                        <input type="hidden" name="pageHistory" value="0">
-
-                        <input type="hidden" name="fvv" value="0">
-
-                        <input type="hidden" name="fbzx" value="5866401548077091962">
-
-                        <p></p>
-
-                        <div class="ss-item ss-navigate"><table id="navigation-table"><tbody><tr><td class="ss-form-entry goog-inline-block" id="navigation-buttons" dir="ltr">
-
-                            <input type="submit" name="submit" value="Submit" id="ss-submit" class="btn btn-primary "></td>
-
-                        </tr></tbody></table></div></div></div></div></div></form>
-
-              <div class="space"></div>
-
-            <div>
-
-            <a href="https://twitter.com/Atumsoftco"><img src="{% static 'images/twitter.png' %}" target="_blank" alt="twitter" class="social"></a>
-            <a href="https://www.facebook.com/atumsoftco"><img src="{% static 'images/facebook.png' %}" target="_blank" alt="facebook" class="social"></a>
-            <a href="https://instagram.com/atumsoft"><img src="{% static 'images/instagram.png' %}" alt="instagram" class="social" target="_blank"></a>
-            <a href="https://angel.co/atumsoft"><img src="{% static 'images/angellist.png' %}" target="_blank" alt="angelist" class="social"></a>
-            <a href="https://www.crunchbase.com/organization/atumsoft#/entity"><img src="{% static 'images/crunchbaseblue.png' %}" target="_blank" alt="crunchbase" class="social"></a>
-
-            </div>
-
-            <div class="inner">
-              <p>Atumsoft, LLC &copy; 2015</p>
-            </div>
-
         </div>
+    </nav>
+</div>
 
-      </div>
+ <!--Hero--> 
 
+
+<div id="index-banner">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 center-align">
+                <div id="a"><img src="img/aimg.png" id="alogo"></div>
+                <div id="b"><img src="img/bimg.png" id="blogo"></div>
+                <div id="c"><img src="img/cimg.png" id="clogo"></div>
+
+                <h1 class="text_h center header cd-headline letters type hero-h1">
+                    <span class="cd-words-wrapper waiting">
+                        <b class="is-visible">Revolutionary</b>
+                        <b>World Changing</b>
+                        <b>Laboratories Simplified.</b>
+                    </span>
+                </h1>
+
+            </div>
+        </div>
     </div>
+</div>
+
+<main></main>
+
+<!--Intro and service-->
+<div id="intro" class="section scrollspy">
+    <div class="container">
+        <div class="row">
+            <div  class="col s12">
+                <h3 class="center header text_h2"> Atumsoft has created the new standard of data collection and analysis in laboratories. Using <span class="span_h2">wireless connectivity</span> for instrumentation, we enable technicians to <span class="span_h2"> save time </span> on monitoring and gathering data, while providing their companies with the <span class="span_h2"> flexibility and mobility </span> that IoT technology allows. </h3>
+            </div>
+
+            <div  class="col s12 m4 l4">
+                <div class="center promo promo-example">
+                    <i class="material-icons" style="padding-top: 10px;">trending_up</i>
+                    <h5 class="promo-caption">Streamlines workflow</h5>
+                    <p class="light center">Reduces the need to walk around when monitoring instrumentation. Notifies user when errors have occured. Eliminates desktop computer, allowing for maximized space within the laboratory.</p>
+                </div>
+            </div>
+            <div class="col s12 m4 l4">
+                <div class="center promo promo-example">
+                    <i class="material-icons" style="padding-top: 10px;">lock_outline</i>
+                    <h5 class="promo-caption">Increases Security</h5>
+                    <p class="light center">Requires user authentication to view results of currently running tests. Only authorized users can view tests during scheduled times.</p>
+                </div>
+            </div>
+            <div class="col s12 m4 l4">
+                <div class="center promo promo-example">
+                    <i class="material-icons" style="padding-top: 10px;">local_atm</i>
+                    <h5 class="promo-caption">Cost Saving</h5>
+                    <p class="light center">Massive energy savings over current setup. Shorter turn around time allows for more contracts.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Work-->
 
 
-      
+<!--Parallax-->
+<div class="parallax-container">
+    <div class="parallax"><img src="img/lab_01.jpg"></div>
+</div>
 
-      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="{% static 'js/bootstrap.min.js' %}"></script>
-  </div></body>
+<!--Team-->
+<div class="section scrollspy" id="team">
+    <div class="container">
+        <h2 class="header text_b"> Our Team </h2>
+        <div class="row">
+            <div class="col s12 m3">
+                <div class="card card-avatar">
+                    <div class="waves-effect waves-block waves-light">
+                        <img class="activator" src="img/olivier.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Olivier Lemaitre <br/>
+                            <small><em><a class="text_b text-darken-1" href="#">CEO</a></em></small></span>
+                        <p>
+                            <a class="blue-text text-lighten-2" href="https://www.facebook.com/olilem">
+                                <i class="fa fa-facebook-square"></i>
+                            </a>
+                            <a class="blue-text text-lighten-2" href="https://twitter.com/Olilem5">
+                                <i class="fa fa-twitter-square"></i>
+                            </a>
+                            <a class="blue-text text-lighten-2" href="https://www.linkedin.com/in/olemaitre">
+                                <i class="fa fa-linkedin-square"></i>
+                            </a>
+                            <a class="blue-text text-lighten-2" href="mailto:olemaitre@atumsoft.com">
+                                <i class="fa fa-envelope-square"></i>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m3">
+                <div class="card card-avatar">
+                    <div class="waves-effect waves-block waves-light">
+                        <img class="activator" src="img/andrew.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Andrew Carl<br/>
+                            <small><em><a class="text_b text-darken-1" href="#">CTO</a></em></small>
+                        </span>
+                        <p>
+                            <a class="blue-text text-lighten-2" href="https://www.facebook.com/andrew.henry.144">
+                                <i class="fa fa-facebook-square"></i>
+                            </a>
+                            <a class="blue-text text-lighten-2" href="https://twitter.com/acarl123">
+                                <i class="fa fa-twitter-square"></i>
+                            </a>
+                            <a class="blue-text text-lighten-2" href="https://www.linkedin.com/in/acarl1">
+                                <i class="fa fa-linkedin-square"></i>
+                            </a>
+                            <a class="blue-text text-lighten-2" href="mailto:acarl@atumsoft.com">
+                                <i class="fa fa-envelope-square"></i>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m3">
+                <div class="card card-avatar">
+                    <div class="waves-effect waves-block waves-light">
+                        <img class="activator" src="img/fontana.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Fontana Ruark<br/>
+                            <small><em><a class="text_b text-darken-1" href="#">CCO</a></em></small></span>
+                        <p>
+                            <a class="blue-text text-lighten-2" href="https://www.facebook.com/fontana.ruark">
+                                <i class="fa fa-facebook-square"></i>
+                            </a>
+                            <a class="blue-text text-lighten-2" href="https://twitter.com/FontanaR">
+                                <i class="fa fa-twitter-square"></i>
+                            </a>
+                            <a class="blue-text text-lighten-2" href="https://www.linkedin.com/in/fontanaruark">
+                                <i class="fa fa-linkedin-square"></i>
+                            </a>
+                            <a class="blue-text text-lighten-2" href="mailto:fruark@atumsoft.com">
+                                <i class="fa fa-envelope-square"></i>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m3">
+                <div class="card card-avatar">
+                    <div class="waves-effect waves-block waves-light">
+                        <img class="activator" src="img/brad.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Brad Conyers<br/>
+                            <small><em><a class="text_b text-darken-1" href="#">VP of Engineering</a></em></small></span>
+                        <p>
+                            <a class="blue-text text-lighten-2" href="https://www.facebook.com/brad.conyers">
+                                <i class="fa fa-facebook-square"></i>
+                            </a>
+                            <a class="blue-text text-lighten-2" href="https://twitter.com/Z3PP">
+                                <i class="fa fa-twitter-square"></i>
+                            </a>
+                            <a class="blue-text text-lighten-2" href="https://www.linkedin.com/in/bradley-conyers-b22a7521">
+                                <i class="fa fa-linkedin-square"></i>
+                            </a>
+                            <a class="blue-text text-lighten-2" href="mailto:bconyers@atumsoft.com">
+                                <i class="fa fa-envelope-square"></i>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Footer-->
+<footer id="contact" class="page-footer default_color scrollspy">
+    <div class="container">  
+        <div class="row">
+            <div class="col l6 s12">
+                <form class="col s12" action="contact.php" method="post">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <i class="mdi-action-account-circle prefix white-text"></i>
+                            <input id="icon_prefix" name="name" type="text" class="validate white-text">
+                            <label for="icon_prefix" class="white-text">Name</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <i class="mdi-communication-email prefix white-text"></i>
+                            <input id="icon_email" name="email" type="email" class="validate white-text">
+                            <label for="icon_email" class="white-text">Email</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <i class="mdi-editor-mode-edit prefix white-text"></i>
+                            <textarea id="icon_prefix2" name="message" class="materialize-textarea white-text"></textarea>
+                            <label for="icon_prefix2" class="white-text">Message</label>
+                        </div>
+                        <div class="col offset-s7 s5">
+                            <button class="btn waves-effect waves-light white darken-1 blue-text" type="submit">Submit
+                                <i class="mdi-content-send right blue-text"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col l3 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                    <li><a class="white-text" href="http://www.atumsoft.com/">Home</a></li>
+                    <li><a class="white-text" href="http://www.atumsoft.com/product.html">Product</a></li>
+                    <li><a class="white-text" href="http://www.atumsoft.com/about.html">About</a></li>
+                    <li><a class="white-text" href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="col l3 s12">
+                <h5 class="white-text">Social</h5>
+                <ul>
+                    <li>
+                        <a class="white-text" href="https://www.twitter.com/atumsoftco">
+                            <i class="small fa fa-twitter white-text" style="padding-bottom: 10px;"></i> Twitter
+                        </a>
+                    </li>
+                    <li>
+                        <a class="white-text" href="https://www.facebook.com/atumsoftco">
+                            <i class="small fa fa-facebook white-text" style="padding-bottom: 10px;"></i> Facebook
+                        </a>
+                    </li>
+                    <li>
+                        <a class="white-text" href="https://www.linkedin.com/company/atumsoft">
+                            <i class="small fa fa-linkedin white-text" style="padding-bottom: 10px;"></i> Linkedin
+                        </a>
+                    </li>
+                    <li>
+                        <a class="white-text" href="https://angel.co/atumsoft">
+                          <i class="small fa fa-angellist white-text" style="padding-bottom: 10px;"></i> Angellist  
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright default_color">
+        <div class="container">
+            
+        </div>
+    </div>
+</footer>
+
+
+    <!--  Scripts-->
+    <script src="min/plugin-min.js"></script>
+    <script src="min/custom-min.js"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/1.3.0/jquery.scrollmagic.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/1.3.0/jquery.scrollmagic.debug.js"></script>
+    <script src="js/brian_scroll.js"></script>
+    
+<!--     <script>
+        $(document).ready(function() {
+        $("#b").animate({left: "+=370"}, 1500);
+    });
+
+        $(document).ready(function() {
+        $("#a").animate({left: "+=300"}, 1500);
+    });
+
+        $(document).ready(function() {
+        $("#c").animate({left: "+=600"}, 1500);
+    });
+
+    </script> -->
+    </body>
 </html>
