@@ -27,8 +27,9 @@ def contact_form(request):
 
 def contact(request):
     #simple caller, disguard output
-    phpPath = os.path.join(TEMPLATE_DIRS[0], 'contact.php')
-    subprocess.call("php %s" % phpPath)
+    # phpPath = os.path.join(TEMPLATE_DIRS[0], 'contact.php')
+    # subprocess.call("php %s" % phpPath)
+    return render(request, 'contact.html')
 
 
 def submit_email(request):

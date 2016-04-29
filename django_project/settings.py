@@ -94,4 +94,4 @@ TEMPLATE_DIRS = (os.path.join(BASE_DIR, "templates"),)
 print TEMPLATE_DIRS
 
 # uncomment for development, comment when pushing to server
-# STATICFILES_DIRS = (os.path.join('django_project/static'), )
+STATICFILES_DIRS = (os.path.join('django_project/static'), )
