@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 {% load staticfiles %}
-{% csrf_token %}
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -81,7 +80,7 @@
         <div class="row">
             <div  class="col s12">
                 <h2 class="header span_h2">Contact Us</h2>
-                <form class="col s12" action="{% url 'contact' %}" method="post">
+                <form class="col s12" action="{% url 'contact' %}" method="post">{% csrf_token %}
                     <div class="row">
                         <div class="input-field col s6">
                             <i class="mdi-action-account-circle prefix blue-text"></i>
