@@ -1,4 +1,3 @@
-{% csrf_token %}
 <?php
 
 if(isset($_POST['email'])) {
