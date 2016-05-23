@@ -65,13 +65,15 @@
                     <li class="is-active"><a href="{% url 'product' %}">Product</a></li>
                     <li><a href="{% url 'soluion' %}">Solution</a></li>
                     <li><a href="{% url 'about' %}">About</a></li>
-                    <li><a href="{% url 'contact-form' %}">Contact</a></li>
+                    <li><a href="mailto:info@atumsoft.com">Contact</a></li>
+                    <!--<li><a href="{% url 'contact-form' %}">Contact</a></li>-->
                 </ul>
                 <ul id="nav-mobile" class="side-nav">
                     <li><a href="{% url 'product' %}">Product</a></li>
                     <li><a href="{% url 'solution' %}">Solution</a></li>
                     <li><a href="{% url 'about' %}">About</a></li>
-                    <li><a href="{% url 'contact-form' %}">Contact</a></li>
+                    <li><a href="mailto:info@atumsoft.com">Contact</a></li>
+                    <!--<li><a href="{% url 'contact-form' %}">Contact</a></li>-->
                 </ul>
             <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
             </div>
@@ -121,12 +123,17 @@
     <div class="container">  
         <div class="row">
             <div class="col l6 s12">
-                <form class="col s12" action="contact.php" method="post">
+                <h5 class="white-text">We'd love to hear from you!</h5>
+                <ul>
+                    <h3><a class="white-text" href="mailto:info@atumsoft.com">info@atumsoft.com</a></h3>
+                </ul>
+                <!--
+                <form class="col s12" action="{% url 'contact' %}" method="post">
                     <div class="row">
                         <div class="input-field col s6">
                             <i class="mdi-action-account-circle prefix white-text"></i>
                             <input id="icon_prefix" name="name" type="text" class="validate white-text">
-                            <label for="icon_prefix" class="white-text">First Name</label>
+                            <label for="icon_prefix" class="white-text">Name</label>
                         </div>
                         <div class="input-field col s6">
                             <i class="mdi-communication-email prefix white-text"></i>
@@ -139,12 +146,13 @@
                             <label for="icon_prefix2" class="white-text">Message</label>
                         </div>
                         <div class="col offset-s7 s5">
-                            <button class="btn waves-effect waves-light red darken-1" type="submit">Submit
-                                <i class="mdi-content-send right white-text"></i>
+                            <button class="btn waves-effect waves-light white darken-1 blue-text" type="submit">Submit
+                                <i class="mdi-content-send right blue-text"></i>
                             </button>
                         </div>
                     </div>
                 </form>
+                -->
             </div>
             <div class="col l3 s12">
                 <h5 class="white-text">Links</h5>
