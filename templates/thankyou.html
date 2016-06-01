@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#2196F3">
     <title>Atumsoft - Laboratories Simplified in Cincinnati, OH</title>
 
-    <meta name="description" content="Atumsoft creates an interconnected workspace in laboratories with wireless technology. With Atumsoft, instruments can be accessed securely from anywhere.">
+    <meta name="description" content="Atumsoft creates an interconnected workspace in laboratories with wireless technology. Contact us if you are interested in learning more.">
 
     <!-- Google Analytics -->
     <script>
@@ -36,25 +36,6 @@
            background-color: #1E88E5;
         }
 
-        #product1 {
-            width: 500px;
-            height: 100%;
-            padding-top: 50px;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        #product2 {
-            width: 600px;
-            height: 100%;
-            padding-top: 50px;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-
 
     </style>
 </head>
@@ -76,16 +57,14 @@
             <div class="nav-wrapper">
             <a href="{% url 'index' %}" id="logo-container" class="brand-logo">Atumsoft</a>
                 <ul class="right hide-on-med-and-down">
-                    <li class="is-active"><a href="{% url 'product' %}">Product</a></li>
+                    <li><a href="{% url 'product' %}">Product</a></li>
                     <li><a href="{% url 'about' %}">About</a></li>
-                    <li><a href="{% url 'contact-form' %}">Contact</a></li>
-                    <!--<li><a href="{% url 'contact-form' %}">Contact</a></li>-->
+                    <li class="is-active"><a href="{% url 'contact-form' %}">Contact</a></li>
                 </ul>
                 <ul id="nav-mobile" class="side-nav">
                     <li><a href="{% url 'product' %}">Product</a></li>
                     <li><a href="{% url 'about' %}">About</a></li>
                     <li><a href="{% url 'contact-form' %}">Contact</a></li>
-                    <!--<li><a href="{% url 'contact-form' %}">Contact</a></li>-->
                 </ul>
             <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
             </div>
@@ -99,47 +78,9 @@
 <div id="intro" class="section scrollspy">
     <div class="container">
         <div class="row">
-            <div class="col s12">
-                <h1 class="center header span_h2">The Atumsoft Bridge</h1>
+            <div  class="col s12">
+                <b class="header span_h2">Thank you for getting in touch with us! We will get back to you in 1 - 3 business days.</b>
             </div>
-
-            <div  class="col s12 m12 l6">
-                <img class="center" id="product1" src="{% static 'img/product_msv.png' %}">
-            </div>
-            
-            <div class="col s12 m12 l6">
-                <h5 class="promo-caption">
-                    <p class="light">
-                        <span class="span_h2" style="font-size: 1.2em"><strong>What is it?</strong></span><br>
-                        The Atumsoft bridge is a small device that replaces the big, bulky computer attached to each instrument in a chemistry lab.<br><br>
-
-                        <span class="span_h2" style="font-size: 1.2em"><strong>How does it work?</strong></span><br>
-                        Instead of having a cable directly connected to a computer, the instrument is plugged into our bridge. This allows for all the data to be securely transmitted to any location that an analyst may be at from a laptop, tablet, or smartphone.
-                        <br><br>
-                    </p>
-                </h5>
-            </div>
-
-            <div class="col s12 m12 l6">
-                <h5 class="promo-caption">
-                    <p class="light">
-                        <span class="span_h2" style="font-size: 1.2em"><strong>What are the benefits?</strong></span><br>
-                        <i class="text_b small fa fa-check"></i> 100% agnostic to the brand of instrument used<br>
-                        <i class="text_b small fa fa-check"></i> Allows labs to continue using the existing instrument software that they know and love<br>
-                        <i class="text_b small fa fa-check"></i> Greater control over lab instruments<br>
-                        <i class="text_b small fa fa-check"></i> Only analysts who are currently scheduled to work on an instrument can see it and access its data
-                        <br><br>
-
-                        <span class="span_h2" style="font-size: 1.2em"><strong>How much is it?</strong></span><br>
-                        <span class="text_b">FREE!</span> We are planning to offer our bridge at no cost. You only have to pay a yearly licensing fee per employee. Please contact us for more information on pricing.<br><br>
-                    </p>
-                </h5>
-            </div>
-
-            <div class="col s12 m12 l6">
-                <img class="center" id="product2" src="{% static 'img/product_sv.png' %}">
-            </div>
-
         </div>
     </div>
 </div>
@@ -149,9 +90,8 @@
 
 <!--Parallax-->
 <div class="parallax-container">
-    <div class="parallax"><img src="{% static 'img/lab_03.jpg' %}"></div>
+    <div class="parallax"><img src="{% static 'img/lab_04.jpg' %}"></div>
 </div>
-
 
 
 <!--Footer-->

@@ -1,5 +1,8 @@
 from django.shortcuts import render
 from django.shortcuts import redirect
+from email.mime.text import MIMEText
+import smtplib
+
 # Create your views here.
 import shelve
 import subprocess, os
@@ -8,6 +11,13 @@ from django_project.settings import TEMPLATE_DIRS
 
 EMAIL_LIST_FILENAME = 'emails.txt'
 EMAIL_DICT = {}
+
+MAILSERVER = smtplib.SMTP('outlook.office365.com', 587)
+MAILSERVER.starttls()
+MAILSERVER.ehlo()
+MAILSERVER.login("info@atumsoft.com", "\"d~XsN*9;+<Ec:ZB")
+FROMADDR = 'info@atumsoft.com'
+TOADDR = 'olemaitre@atumsoft.com'
 
 
 def index(request):
@@ -36,12 +46,6 @@ def contact(request):
 def submit_email(request):
     if request.method == 'POST':
 
-
-        import pdb;
-
-        pdb.set_trace()
-        print "WE WENT HERE"
-
         email = str(request.POST['email'])
         name = str(request.POST['name'])
         message = str(request.POST['message'])
@@ -49,19 +53,14 @@ def submit_email(request):
         if not (email or not name) and message:
             return redirect('index')
 
-        inquiry = name + "," + email + "," + message
+        body = name + "," + email + "," + message
 
-        if EMAIL_DICT.get(inquiry):
-            return render(request, 'thankyou.html')
-        else:
-            EMAIL_DICT[inquiry] = True
+        msg = MIMEText(body)
+        msg['Subject'] = 'Contact form received'
+        msg['From'] = FROMADDR
+        msg['To'] = TOADDR
 
-        emailshelve = shelve.open('emails.shl')
-        emailshelve[inquiry] = True
-        emailshelve.sync()
-        emailshelve.close()
-        # with open(EMAIL_LIST_FILENAME, 'a+') as emailFile:
-        #     emailFile.write('{}\n'.format(email))
+        MAILSERVER.sendmail(FROMADDR, [TOADDR], msg.as_string())
 
         return render(request, 'thankyou.html')
 
@@ -76,7 +75,3 @@ def team(request):
 
 def press(request):
     return render(request, 'press.html')
-
-
-def thankyou(request):
-    return render(request, 'thankyou.html')

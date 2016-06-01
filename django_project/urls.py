@@ -20,7 +20,7 @@ urlpatterns = patterns('',
     #url(r'^submit_email/$', views.submit_email, name='submit_email'),
     #url(r'^team/$', views.team, name='team'),
     #url(r'^press/$', views.press, name='press'),
-    #url(r'^thankyou/$', views.thankyou, name='thankyou'),
+    url(r'^thankyou', views.submit_email, name='thankyou'),
 )
 
 urlpatterns += staticfiles_urlpatterns()
