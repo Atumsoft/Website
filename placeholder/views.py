@@ -58,7 +58,7 @@ def submit_email(request):
 
         msg = MIMEText(body)
 
-        thread.start_new_thread(sendmail, (msg))
+        thread.start_new_thread(sendmail, (msg,))
 
         return render(request, 'thankyou.html')
 
