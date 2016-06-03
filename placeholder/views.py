@@ -7,17 +7,18 @@ import smtplib
 import shelve
 import subprocess, os
 from django_project.settings import TEMPLATE_DIRS
-
+import thread
 
 EMAIL_LIST_FILENAME = 'emails.txt'
 EMAIL_DICT = {}
 
-MAILSERVER = smtplib.SMTP('outlook.office365.com', 587)
-MAILSERVER.starttls()
-MAILSERVER.ehlo()
-MAILSERVER.login("info@atumsoft.com", "\"d~XsN*9;+<Ec:ZB")
-FROMADDR = 'info@atumsoft.com'
-TOADDR = 'olemaitre@atumsoft.com'
+# need to dynamically make the connection
+# MAILSERVER = smtplib.SMTP('outlook.office365.com', 587)
+# MAILSERVER.starttls()
+# MAILSERVER.ehlo()
+# MAILSERVER.login("info@atumsoft.com", "\"d~XsN*9;+<Ec:ZB")
+# FROMADDR = 'info@atumsoft.com'
+# TOADDR = 'olemaitre@atumsoft.com'
 
 
 def index(request):
@@ -56,11 +57,8 @@ def submit_email(request):
         body = name + "," + email + "," + message
 
         msg = MIMEText(body)
-        msg['Subject'] = 'Contact form received'
-        msg['From'] = FROMADDR
-        msg['To'] = TOADDR
 
-        MAILSERVER.sendmail(FROMADDR, [TOADDR], msg.as_string())
+        thread.start_new_thread(sendmail, (msg))
 
         return render(request, 'thankyou.html')
 
@@ -75,3 +73,20 @@ def team(request):
 
 def press(request):
     return render(request, 'press.html')
+
+# need to make this connection every time so server doesn't time out
+def sendmail(msg):
+    MAILSERVER = smtplib.SMTP('outlook.office365.com', 587)
+    MAILSERVER.starttls()
+    MAILSERVER.ehlo()
+    MAILSERVER.login("info@atumsoft.com", "\"d~XsN*9;+<Ec:ZB")
+    FROMADDR = 'info@atumsoft.com'
+    TOADDR = 'olemaitre@atumsoft.com'
+
+    msg['Subject'] = 'Contact form received'
+    msg['From'] = FROMADDR
+    msg['To'] = TOADDR
+
+    MAILSERVER.sendmail(FROMADDR, [TOADDR], msg.as_string())
+
+    MAILSERVER.close()
