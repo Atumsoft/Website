@@ -12,6 +12,7 @@ import thread
 EMAIL_LIST_FILENAME = 'emails.txt'
 EMAIL_DICT = {}
 
+
 # need to dynamically make the connection
 # MAILSERVER = smtplib.SMTP('outlook.office365.com', 587)
 # MAILSERVER.starttls()
@@ -24,20 +25,29 @@ EMAIL_DICT = {}
 def index(request):
     return render(request, 'index.html')
 
+
 def about(request):
     return render(request, 'about.html')
+
 
 def product(request):
     return render(request, 'product.html')
 
+
 def solution(request):
     return render(request, 'solution.html')
+
+
+def oops(request):
+    return render(request, 'oops.html')
+
 
 def contact_form(request):
     return render(request, 'contact-form.html')
 
+
 def contact(request):
-    #simple caller, disguard output
+    # simple caller, disguard output
     phpPath = os.path.join(TEMPLATE_DIRS[0], 'contact.php')
     print phpPath
     subprocess.call("php %s" % phpPath)
@@ -67,12 +77,13 @@ def submit_email(request):
 
 
 def team(request):
-    #import pdb; pdb.set_trace()
+    # import pdb; pdb.set_trace()
     return render(request, 'team.html')
 
 
 def press(request):
     return render(request, 'press.html')
+
 
 # need to make this connection every time so server doesn't time out
 def sendmail(msg):

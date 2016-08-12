@@ -12,6 +12,7 @@ urlpatterns = patterns('',
 
     url(r'^admin103759/', include(admin.site.urls)),
     url(r'^$', views.index, name='index'),
+    url(r'^oops', views.oops, name='oops'),
     url(r'^about$', views.about, name='about'),
     url(r'^product$', views.product, name='product'),
     url(r'^solution$', views.solution, name='solution'),
@@ -21,8 +22,7 @@ urlpatterns = patterns('',
     #url(r'^team/$', views.team, name='team'),
     #url(r'^press/$', views.press, name='press'),
     url(r'^thankyou', views.submit_email, name='thankyou'),
-    url(r'^atumsoft.*/$', RedirectView.as_view(url='http://atumate.com')),
-    url(r'^http://atumsoft.*/$', RedirectView.as_view(url='http://atumate.com')),
+    url(r'^.*/$', RedirectView.as_view(url='/oops')),
 )
 
 urlpatterns += staticfiles_urlpatterns()
