@@ -1,5 +1,5 @@
 from django.conf.urls import patterns, include, url
-
+from django.views.generic import RedirectView
 from django.contrib import admin
 from placeholder import views
 admin.autodiscover()
@@ -21,6 +21,8 @@ urlpatterns = patterns('',
     #url(r'^team/$', views.team, name='team'),
     #url(r'^press/$', views.press, name='press'),
     url(r'^thankyou', views.submit_email, name='thankyou'),
+    url(r'^atumsoft.*/$', RedirectView.as_view(url='http://atumate.com')),
+    url(r'^http://atumsoft.*/$', RedirectView.as_view(url='http://atumate.com')),
 )
 
 urlpatterns += staticfiles_urlpatterns()
