@@ -1,2 +1,2 @@
 # Website
-website for atumsoft.com
+website for atumate.com

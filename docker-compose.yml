@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  website:
+    build: ./php-server
+    restart: always
+    volumes:
+      - ./website:/var/www/html
+    ports:
+      - 80:80
