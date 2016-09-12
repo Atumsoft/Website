@@ -183,7 +183,7 @@ if(isset($_POST['emailSent'])) {
 											<nav>
 												<ul class="nav nav-pills" id="mainNav">
 													<li class="">
-														<a href="atumate.html">
+														<a href="index.html">
 															Home
 														</a>
 														
