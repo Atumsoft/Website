@@ -472,7 +472,7 @@ if(isset($_POST['emailSent'])) {
 		<!-- Theme Initialization Files -->
 		<script src="js/theme.init.js"></script>
 
-		<script src="http://maps.google.com/maps/api/js"></script>
+		<script src="http://maps.google.com/maps/api/js?key=AIzaSyC9fJZq5emG4WcyodtA5Ii9OU42Jh5dH2w"></script>
 		<script>
 
 			/*
