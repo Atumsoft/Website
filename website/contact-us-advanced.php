@@ -205,6 +205,12 @@ if(isset($_POST['emailSent'])) {
 														</a>
 													</li>
 
+													<li class="">
+														<a href="news.html">
+															News
+														</a>
+													</li>
+
 													<li class="active">
 														<a href="contact-us-advanced.php">
 															Contact Us
